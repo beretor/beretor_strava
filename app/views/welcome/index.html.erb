@@ -39,3 +39,65 @@
 <p>
   The time is now: <%= Time.now %>
 </p>
+
+<%=
+require 'net/http'
+require 'uri'
+
+uri = URI.parse("https://www.strava.com/api/v3/athlete")
+request = Net::HTTP::Get.new(uri)
+request["Authorization"] = "Bearer f64f628341c3935cc42d94785116bc1ad6fefcba"
+
+req_options = {
+  use_ssl: uri.scheme == "https",
+}
+
+response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+  http.request(request)
+end
+
+#response.code
+response.body
+%>
+
+<%=
+require 'net/http'
+require 'uri'
+
+uri = URI.parse("https://www.strava.com/api/v3/athletes/6445305/stats")
+request = Net::HTTP::Get.new(uri)
+request["Authorization"] = "Bearer f64f628341c3935cc42d94785116bc1ad6fefcba"
+
+req_options = {
+   use_ssl: uri.scheme == "https",
+ }
+
+response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+   http.request(request)
+end
+
+response.code
+ response.body
+%>
+
+<%=
+require 'net/http'
+require 'uri'
+
+uri = URI.parse("https://www.strava.com/api/v3/athlete/activities?before=1664268466&after=1661990400&page=1&per_page=30")
+request = Net::HTTP::Get.new(uri)
+request["Authorization"] = "Bearer d764488054d76114acce7eec6792384a890cd0aa"
+
+req_options = {
+   use_ssl: uri.scheme == "https",
+ }
+
+response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+   http.request(request)
+end
+
+response.code
+ response.body
+%>
+
+

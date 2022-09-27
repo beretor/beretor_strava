@@ -1,0 +1,51 @@
+curl -o beretorstrava.html -X GET \       
+https://www.strava.com/api/v3/athlete \
+-H 'Authorization: Bearer c789c2240603acb6c6efd1efc439e6758b120ad9'
+
+
+curl -X POST https://www.strava.com/oauth/token \
+        -F client_id=90376 \       
+        -F client_secret=c7d2eb2c350122af84d0552a8fc80daf6069299b \
+        -F code=25c944567433583b49c674f712c3b3a7c7b42555 \
+        -F grant_type=authorization_code
+
+        <p>
+          <%=
+          require 'net/http'
+          
+          uri = URI('https://www.strava.com/oauth/token')
+          req = Net::HTTP::Post.new(uri)
+          
+          req.set_form(
+            [
+              [
+                'client_id',
+                '90376'
+              ],
+              [
+                'client_secret',
+                'f64f628341c3935cc42d94785116bc1ad6fefcba'
+              ],
+              [
+                'code',
+                '6c75225edff64f2d4a7362c5de3c067a6ed58180'
+              ],
+              [
+                'grant_type',
+                'authorization_code'
+              ]
+            ],
+            'multipart/form-data'
+          )
+          
+          req_options = {
+            use_ssl: uri.scheme == "https"
+          }
+          res = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
+            http.request(req)
+          end
+          
+          res.body
+          %>
+          </p>
+          
