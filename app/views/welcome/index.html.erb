@@ -2,7 +2,7 @@
 
 <h2>Beretor stats</h2>
 <p>
-  Today we are <%= Time.now %>
+  Today we are <%= Time.now %>, it has been time <%= Time.now %> since you last rode
 </p>
 
 <%=
@@ -11,7 +11,7 @@ require 'uri'
 
 uri = URI.parse("https://www.strava.com/api/v3/athlete")
 request = Net::HTTP::Get.new(uri)
-request["Authorization"] = "Bearer f64f628341c3935cc42d94785116bc1ad6fefcba"
+request["Authorization"] = "Bearer a213ffc7003946159d9eb43ce645de1ae4a7d08b"
 
 req_options = {
   use_ssl: uri.scheme == "https",
@@ -25,13 +25,16 @@ end
 response.body
 %>
 
+
+
+
 <%=
 require 'net/http'
 require 'uri'
 
 uri = URI.parse("https://www.strava.com/api/v3/athletes/6445305/stats")
 request = Net::HTTP::Get.new(uri)
-request["Authorization"] = "Bearer f64f628341c3935cc42d94785116bc1ad6fefcba"
+request["Authorization"] = "Bearer a213ffc7003946159d9eb43ce645de1ae4a7d08b"
 
 req_options = {
    use_ssl: uri.scheme == "https",
@@ -51,7 +54,7 @@ require 'uri'
 
 uri = URI.parse("https://www.strava.com/api/v3/athlete/activities?before=1664268466&after=1661990400&page=1&per_page=30")
 request = Net::HTTP::Get.new(uri)
-request["Authorization"] = "Bearer d764488054d76114acce7eec6792384a890cd0aa"
+request["Authorization"] = "Bearer a213ffc7003946159d9eb43ce645de1ae4a7d08b"
 
 req_options = {
    use_ssl: uri.scheme == "https",

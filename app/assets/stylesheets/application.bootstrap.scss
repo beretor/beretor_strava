@@ -1,2 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'bootstrap-icons/font/bootstrap-icons';
+
+
+
+.strava {
+  position: absolute;
+  width: 50vmin;
+  aspect-ratio: 1;
+  background: var(--bg);
+  border-radius: 20px;
+}
