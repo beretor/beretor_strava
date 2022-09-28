@@ -2,7 +2,7 @@
 
 <h2>Beretor stats</h2>
 <p>
-  Today we are <%= Time.now %>, it has been time <%= Time.now %> since you last rode
+  Today we are <%= Time.now %>, it has been time <%= Time.now %> since your last ride
 </p>
 
 <%=
@@ -25,29 +25,6 @@ end
 response.body
 %>
 
-
-
-
-<%=
-require 'net/http'
-require 'uri'
-
-uri = URI.parse("https://www.strava.com/api/v3/athletes/6445305/stats")
-request = Net::HTTP::Get.new(uri)
-request["Authorization"] = "Bearer a213ffc7003946159d9eb43ce645de1ae4a7d08b"
-
-req_options = {
-   use_ssl: uri.scheme == "https",
- }
-
-response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
-   http.request(request)
-end
-
-response.code
- response.body
-%>
-
 <%=
 require 'net/http'
 require 'uri'
@@ -65,7 +42,7 @@ response = Net::HTTP.start(uri.hostname, uri.port, req_options) do |http|
 end
 
 response.code
- response.body
+response.body
 %>
 
 

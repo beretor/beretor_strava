@@ -1,0 +1,11 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  ride_name: MyString
+  ride_length: 1
+  ride_date: 2022-09-28
+
+two:
+  ride_name: MyString
+  ride_length: 1
+  ride_date: 2022-09-28

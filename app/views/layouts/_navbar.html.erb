@@ -8,15 +8,16 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link" href="#">Rides</a>
+          <%= link_to "Add a ride", new_ride_path, class: "nav-link" %>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-            Riders
+            Rides
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-            <li><a class="dropdown-item" href="#">Add a ride</a></li>
-            <li><a class="dropdown-item" href="#">Edit a ride </a></li>
+           
+           <%= link_to "All Rides", rides_path, class: "nav-link" %>
+      
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">View total stats</a></li>
           </ul>
