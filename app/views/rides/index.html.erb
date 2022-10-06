@@ -26,9 +26,9 @@ response.code
   <% @rides.each do |ride| %>
     <%= render ride %>
     <p>
-      <%= link_to "Show this ride", ride %>
+      <%= link_to "Show this ride", ride, class: "btn btn-primary" %>
     </p>
   <% end %>
 </div>
 
-<%= link_to "New ride", new_ride_path %>
+<%= link_to "New ride", new_ride_path, class: "btn btn-primary" %>
