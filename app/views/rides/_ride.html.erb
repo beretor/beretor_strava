@@ -1,20 +1,22 @@
-<div class="container-fluid">
+<div class="card" style="width: 18rem;">
+ <div class="card-body">
 
 <div id="<%= dom_id ride %>">
+ <img src="..." class="card-img-top" alt="...">
   <p>
-    <strong>Ride name:</strong>
+   <h5 class="card-title "text-center">Ride Name</h5>
     <%= ride.ride_name %>
   </p>
 
   <p>
-    <strong>Ride length:</strong>
-    <%= ride.ride_length %>
+    <h6 class="card-subtitle">Ride Length </h6>
+    <%= ride.ride_length %> kms
   </p>
 
   <p>
-    <strong>Ride date:</strong>
+    <h6 class="card-subtitle">Ride Date </h6>
     <%= ride.ride_date %>
   </p>
-
+<%= link_to "Show this ride", ride, class: "btn btn-primary" %>
 </div>
 </div>
