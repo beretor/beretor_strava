@@ -1,6 +1,6 @@
 <h2>Beretor stats</h2>
 <p>
-  Today we are <%= Time.now %>, it has been time <%= Time.now %> since your last ride
+  Today we are <%= Time.now.strftime("%A %B %Y") %> and it is <%= Time.now.strftime("%H %M") %>, it has been <%= (Time.now - 1000).hour %> hours since your last ride
 </p>
 
 <%=
