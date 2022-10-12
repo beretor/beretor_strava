@@ -2,7 +2,7 @@
  <div class="card-body">
 
 <div id="<%= dom_id ride %>">
- <img src="..." class="card-img-top" alt="...">
+ <img src="/assets/images/picture.jpg" alt="Picture" width="500" height="500" />
   <p>
    <h5 class="card-title "text-center"><%= ride.ride_name %></h5>
   </p>
@@ -12,7 +12,7 @@
   </p>
 
   <p>
-    <h6 class="card-subtitle"><%= ride.ride_date %> </h6>
+    <h6 class="card-subtitle"><%= ride.ride_date.strftime("%A %B %Y") %> </h6>
     
   </p>
 <%= link_to "Show this ride", ride, class: "btn btn-primary" %>
