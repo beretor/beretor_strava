@@ -17,6 +17,17 @@
   margin-left: 1em;
 }
 
+
+#training_runs  {
+  background: whitesmoke;
+  color: blue;
+  border: 2px solid #000;
+  text-align: center;
+  padding: 8px 0 10px 0;
+  margin-right: 1em;
+  margin-left: 1em;
+}
+
 .navbar {
   background-color: lightblue !important;
 }
@@ -54,9 +65,7 @@ body {
   background-color: rgb(150, 14, 26);
 }
 
-#dom_id ride {
 
-} 
 
 #sticky-footer {
   flex-shrink: none;

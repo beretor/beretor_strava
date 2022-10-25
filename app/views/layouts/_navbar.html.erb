@@ -22,9 +22,22 @@
             <li><a class="dropdown-item" href="#">View total stats</a></li>
           </ul>
         </li>
-        <li class="nav-item">
+        <li class="nav-item dropdown">
+        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Training Runs
+          </a>
+        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
           <%= link_to "Training Plan", asset_path("running-addict-plan-entrainement-semi-marathon-5xsemaine.pdf"), class: "nav-link" %>
+        
+       
+        <li class="nav-item">
+          <%# link_to "Add a plan", new_training_plan_path, class: "nav-link" %>
         </li>
+        <li><hr class="dropdown-divider"></li>
+       <li class="nav-item">
+          <%= link_to "Check the run today", training_runs_path, class: "nav-link" %>
+        </li>
+         </ul>
       </ul>
       <form class="d-flex" role="search">
         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">

@@ -1,0 +1,47 @@
+<p style="color: green"><%= notice %></p>
+
+<h1>Training runs</h1>
+
+<div id="training_runs">
+  <% @training_runs.each do |training_run| %>
+    <%= render training_run %>
+    <p>
+      <%= link_to "Show this training run", training_run %>
+    </p>
+  <% end %>
+</div>
+
+
+<table class="table table-hover table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Date</th>
+      <th scope="col">Duration</th>
+      <th scope="col">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th scope="row">1</th>
+      <td>Mark</td>
+      <td>Otto</td>
+      <td>@mdo</td>
+    </tr>
+    <tr>
+      <th scope="row">2</th>
+      <td>Jacob</td>
+      <td>Thornton</td>
+      <td>@fat</td>
+    </tr>
+    <tr>
+      <th scope="row">3</th>
+      <td colspan="2">Larry the Bird</td>
+      <td>@twitter</td>
+    </tr>
+  </tbody>
+</table>
+
+
+<%= link_to "New training run", new_training_run_path %>

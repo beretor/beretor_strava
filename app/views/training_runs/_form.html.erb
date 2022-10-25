@@ -1,0 +1,44 @@
+<div class="container">
+<div class="mb-3 text-left">
+
+
+<%= form_with(model: training_run) do |form| %>
+  <% if training_run.errors.any? %>
+    <div style="color: red">
+      <h2><%= pluralize(training_run.errors.count, "error") %> prohibited this training_run from being saved:</h2>
+
+      <ul>
+        <% training_run.errors.each do |error| %>
+          <li><%= error.full_message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div>
+    <%= form.label :training_run_name, style: "display: block" %>
+    <%= form.text_field :training_run_name %>
+  </div>
+
+  <div>
+    <%= form.label :training_run_duration, style: "display: block" %>
+    <%= form.number_field :training_run_duration %>
+  </div>
+
+  <div>
+    <%= form.label :training_run_date, style: "display: block" %>
+    <%= form.date_field :training_run_date %>
+  </div>
+
+ <div>
+    <%= form.label :training_run_description, style: "display: block" %>
+    <%= form.text_field :training_run_description %>
+  </div>
+
+  <div>
+    <%= form.submit %>
+  </div>
+<% end %>
+
+</div>
+</div>
