@@ -65,6 +65,6 @@ class TrainingRunsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def training_run_params
-      params.require(:training_run).permit(:training_run_name, :training_run_duration, :training_run_date, :training_run_description)
+      params.require(:training_run).permit(:name, :duration, :date, :description)
     end
 end
